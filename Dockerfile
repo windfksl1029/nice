@@ -4,6 +4,8 @@ FROM jboss/wildfly:latest
 # 작업 디렉토리 설정
 WORKDIR /opt/jboss/wildfly/standalone/
 
+RUN rm -f /opt/jboss/wildfly/standalone/configuration/standalone.xml
+
 # 수정된 standalone.xml 복사
 COPY standalone.xml /opt/jboss/wildfly/standalone/configuration/standalone.xml
 
