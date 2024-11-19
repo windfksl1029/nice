@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cywel
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cywell
+  template:
+    metadata:
+      labels:
+        app: cywell
+    spec:
+      containers:
+      - name: my-app-container
+        image: windfksl/cywell:v1.0.0
+        ports:
+        - containerPort: 80
+
+# Testing Git push functionality
