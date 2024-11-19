@@ -1,10 +1,10 @@
 # JBoss WildFly 이미지 사용
 FROM jboss/wildfly:latest
 
-RUN chmod +r tra.sh
+
 COPY tra.sh /tra.sh
-RUN chmod +x /tra.sh
-CMD ["/tra.sh"]
+
+CMD ["sh", "/tra.sh"]
 # 작업 디렉토리 설정
 WORKDIR /opt/jboss/wildfly/standalone/
 
