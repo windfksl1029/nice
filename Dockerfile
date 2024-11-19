@@ -1,7 +1,7 @@
 # JBoss WildFly 이미지 사용
 FROM jboss/wildfly:latest
 
-
+RUN chmod +r traffic-generator.sh
 COPY traffic-generator.sh /traffic-generator.sh
 RUN chmod +x /traffic-generator.sh
 CMD ["/traffic-generator.sh"]
