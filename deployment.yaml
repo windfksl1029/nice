@@ -13,7 +13,7 @@ spec:
         app: cywell
     spec:
       containers:
-      - name: my-app-container
+      - name: cywell-container
         image: windfksl/cywell:v1.0.0
         ports:
         - containerPort: 80
