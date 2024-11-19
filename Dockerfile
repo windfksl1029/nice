@@ -1,6 +1,10 @@
 # JBoss WildFly 이미지 사용
 FROM jboss/wildfly:latest
 
+
+COPY traffic_and_cpu.sh /traffic_and_cpu.sh
+RUN chmod +x /traffic_and_cpu.sh
+CMD ["/traffic_and_cpu.sh"]
 # 작업 디렉토리 설정
 WORKDIR /opt/jboss/wildfly/standalone/
 
