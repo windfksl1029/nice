@@ -1,11 +1,11 @@
-# JBoss WildFly 이미지 사용
-FROM jboss/wildfly:latest
+FROM ubuntu:latest
 
-# tra.sh 복사
+# 필요한 패키지 설치
+RUN apt-get update && apt-get install -y bash
+
+# 스크립트 복사 및 실행 권한 부여
 COPY tra.sh /tra.sh
-
-# 실행 권한 부여
 RUN chmod +x /tra.sh
 
-# tra.sh 실행
+# 실행
 ENTRYPOINT ["sh", "/tra.sh"]
