@@ -1,8 +1,10 @@
 FROM ubuntu:latest
 
-# bash 설치
+# root 사용자로 작업 수행
 USER root
-RUN yum update -y && yum install -y bash
+
+# 패키지 업데이트 및 bash 설치
+RUN apt-get update && apt-get install -y bash curl
 
 # 작업 디렉토리 설정
 WORKDIR /opt/app
