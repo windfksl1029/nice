@@ -1,4 +1,4 @@
-TARGET_URL="https://app-app.apps.ocp.komsco.co.kr"
+TARGET_URL="app-app.apps.ocp.komsco.co.kr"
 INTERVAL=0.1 # 요청 간격 (초 단위)
 REQUEST_THREADS=4 # 요청을 보내는 스레드 수
 
